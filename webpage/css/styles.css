@@ -1,25 +1,21 @@
 * {
     box-sizing: border-box;
 }
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Helvetica Neue", Roboto, Arial, sans-serif;
-  font-size: 62.5%;
-  color: black;
-  background: white;
+  font-family: 'Rammetto One', cursive, sans-serif;
 }
-
 /* Style the header */
-header {
+.header {
   grid-area: header;
-  background-color: #f1f1f1;
-  padding: 30px;
+  background-color: #000000;
+  background-image: url("http://www.chinkes.com/wp-content/uploads/2014/01/cropped-25943212.jpg");
+  background-repeat: no-repeat;
+  background-position: -150px -320px;
+  padding: 1px;
   text-align: center;
-  font-size: 35px;
+  font-size: 1.25em;
+  color: #ffffff;
 }
-
 /* The grid container */
 .grid-container {
   display: grid;
@@ -29,36 +25,32 @@ header {
   'footer footer footer footer footer footer';
   /* grid-column-gap: 10px; - if you want gap between the columns */
 } 
-
 .left,
 .middle,
 .right {
   padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
 }
-
 /* Style the left column */
 .left {
   grid-area: left;
 }
-
 /* Style the middle column */
 .middle {
   grid-area: middle;
 }
-
 /* Style the right column */
 .right {
   grid-area: right;
 }
-
 /* Style the footer */
-footer {
+.footer {
   grid-area: footer;
   background-color: #f1f1f1;
   padding: 10px;
   text-align: center;
+  font-size: 10px;
 }
-
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
   .grid-container  {
@@ -68,21 +60,4 @@ footer {
     'middle middle middle middle middle middle' 
     'right right right right right right' 
     'footer footer footer footer footer footer';
-}
- 
- .website-nav {
-  position: relative;
-  padding: 5rem;
-}
-
-.website-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.website-nav ul li {
-  float: left;
-  padding: 0.5rem 2rem 0.5rem 0;
-  line-height: 21px;
 }
