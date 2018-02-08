@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rammetto One', cursive, sans-serif;
+}
+
+/* Style the header */
+.header {
+  grid-area: header;
+  background-color: #000000;
+  background-image: url("http://www.chinkes.com/wp-content/uploads/2014/01/cropped-25943212.jpg");
+  background-repeat: no-repeat;
+  background-position: -150px -320px;
+  padding: 1px;
+  text-align: center;
+  font-size: 1.25em;
+  color: #ffffff;
+}
+
+/* The grid container */
+.grid-container {
+  display: grid;
+  grid-template-areas: 
+  'header header header header header header' 
+  'left middle middle middle middle right' 
+  'footer footer footer footer footer footer';
+  /* grid-column-gap: 10px; - if you want gap between the columns */
+} 
+
+.left,
+.middle,
+.right {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Style the left column */
+.left {
+  grid-area: left;
+}
+
+/* Style the middle column */
+.middle {
+  grid-area: middle;
+}
+
+/* Style the right column */
+.right {
+  grid-area: right;
+}
+
+/* Style the footer */
+.footer {
+  grid-area: footer;
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .grid-container  {
+    grid-template-areas: 
+    'header header header header header header' 
+    'left left left left left left' 
+    'middle middle middle middle middle middle' 
+    'right right right right right right' 
+    'footer footer footer footer footer footer';
+}
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="header">
+    <h2>Chinkes Food</h2>
+  </div>
+  <div class="left"></div>
+  <div class="middle" style="background-color:#bbb;">image of food</div>  
+  <div class="right"></div>
+  <div class="footer">
+    <p>&copy; 2018 - John Chinkes - Food I made and/or ate</p>
+  </div>
+</div>
+
+</body>
+</html>
